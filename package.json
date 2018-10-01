@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    
     "test": "live-server --open=./SpecRunner.html --port=8081",
     "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash"
   },
@@ -17,11 +18,20 @@
     "react-dom": "^0.14.7"
   },
   "devDependencies": {
-    "babel-cli": "^6.6.5",
+    "babel-cli": "^6.26.0",
     "babel-plugin-react": "1.0.0",
     "babel-preset-react": "^6.5.0",
     "chai": "^3.5.0",
     "mocha": "2.3.3",
     "sinon": "1.17.3"
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicahWeiss/hratx37-recast.ly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MicahWeiss/hratx37-recast.ly/issues"
+  },
+  "homepage": "https://github.com/MicahWeiss/hratx37-recast.ly#readme"
 }
