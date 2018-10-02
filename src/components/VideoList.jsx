@@ -4,7 +4,7 @@ var VideoList =(props) => {
   const videos = props.videos;
   return(
   <div className="video-list">{
-    videos.map(vid => <div key={vid.id.videoId}> <VideoListEntry video = {vid} handleClick={props.handleClick} /> </div> )}
+    videos.map(vid => <VideoListEntry key={vid.id.videoId} video = {vid} handleClick={props.handleClick} />)}
   </div>)
 };
 
