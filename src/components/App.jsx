@@ -10,15 +10,22 @@ class App extends React.Component {
     this.state = {
       currentVideo : exampleVideoData[0],
       searchResults : exampleVideoData
+
     }
     this.handleClick = this.handleClick.bind(this);
+    this.getSearchResults = this.getSearchResults.bind(this);
   }
 
   handleClick(video) {
     this.setState({
       currentVideo: video
     })
-  }; 
+  };
+
+  getSearchResults(){
+    console.log('get search from text input')
+    
+  }  
 
   render(){
     return (
@@ -26,7 +33,7 @@ class App extends React.Component {
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
           <div><h5>Look at this sweet-ass  seach bar!</h5>
-            <Search />
+            <Search getSearchResults={this.getSearchResults} />
           </div>
           
         </div>
