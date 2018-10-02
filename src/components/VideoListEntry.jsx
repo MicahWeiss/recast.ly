@@ -1,14 +1,14 @@
 var VideoListEntry = function({video, handleClick}) {
-  console.log('videoListEntry props', handleClick);
 
   let url = "https://www.youtube.com/embed/" + video.id.videoId;
   return (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
       <img className="media-object" src={video.snippet.thumbnails.default.url} alt="" />
+      
     </div>
     <div className="media-body">
-      <div onClick={handleClick(video)} className="video-list-entry-title">{video.snippet.title}</div>
+      <div onClick={(ev) => handleClick(video)} className="video-list-entry-title">{video.snippet.title}</div>
       <div className="video-list-entry-detail">{video.snippet.description}</div>
     </div>
   </div>

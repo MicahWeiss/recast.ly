@@ -1,7 +1,6 @@
 import VideoListEntry from './VideoListEntry.js';
 
 var VideoList =(props) => {
-  console.log('VL console log', props);
   const videos = props.videos;
   return(
   <div className="video-list">{

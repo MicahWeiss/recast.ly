@@ -15,10 +15,9 @@ class App extends React.Component {
   }
 
   handleClick(video) {
-    console.log('click reg');
-    // this.setState(
-    //   this.currentVideo: video //takes in a video param
-    // })
+    this.setState({
+      currentVideo: video
+    })
   }; 
 
   render(){
@@ -26,7 +25,7 @@ class App extends React.Component {
     <div>
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
-          <div><h5>Look at this sweet-ass seach bar!</h5>
+          <div><h5>Look at this sweet-ass  seach bar!</h5>
             <Search />
           </div>
           
