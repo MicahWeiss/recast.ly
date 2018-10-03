@@ -1,22 +1,27 @@
-import searchYouTube from '../lib/searchYouTube.js'
+import searchYouTube from '../lib/searchYouTube.js';
 
 class Search extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       value: ''
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value})
+    this.setState({value: event.target.value});
   }
 
-  handleSubmit(event){
-    
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log('searching...');
+    console.log('state', this.state.value);
+    console.log('callback', this.props);
+    searchYouTube(this.state.value, this.props.getSearchResults);
+
   }
 
   
@@ -24,12 +29,12 @@ class Search extends React.Component {
   render() {
     return (<div className="search-bar form-inline">
       <input className="form-control" type="text" value={this.state.query} onChange={this.handleChange}/>
-      <button className="btn hidden-sm-down" onClick={() => {this.props.getSearchResults()}}>
+      <button className="btn hidden-sm-down" onClick={() => { this.handleSubmit(event); }}>
         <span className="glyphicon glyphicon-search"></span>
       </button>
-    </div> )
+    </div> );
   }  
-};
+}
 
 
 
